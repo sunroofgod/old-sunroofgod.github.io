@@ -1,26 +1,60 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
         <title>Portfolio Website</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <header>
-            <a href="#" class="logo">Logo</a>
-        </header>    
-        <u1>
-            <li><a href="#">Home</li>
-            <li><a href="#">About</li>
-            <li><a href="#">Projects</li>
-        </u1>
+        <section class="header">
+            <nav>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Projects</a></li>
+                        <li><a href="">Blog</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+        <div class="container">
+            <h1>I love <span class="maintext"></span></h1>
+            <div class="fade">
+                <p>Kah Seng is typing...</p>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script>
+            var typed = new Typed(".maintext", {
+                strings: ["coding.^900", "math.^900", "theatre.^900", "sleeping.^1000", "being hired."],
+                typeSpeed: 150,
+                backSpeed: 100,
+                loop: true
+            })
+        </script>
+
+        <section class="about">
+        </section>        
+        <script>
+            const body = document.body;
+            let lastScroll = 0;
+            window.addEventListener("scroll", () => {
+                const currrentScroll = window.pageYOffset
+                if(currrentScroll <= 0){
+                    body.classList.remove("scroll-up");
+                }
+                if(currrentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+                    body.classList.remove("scroll-up");
+                    body.classList.add("scroll-down");
+                }
+                if(currrentScroll < lastScroll && body.classList.contains("scroll-down")) {
+                    body.classList.remove("scroll-down");
+                    body.classList.add("scroll-up");
+                }
+                lastScroll = currrentScroll;
+            })
+        </script>
     </body>
 </html>
 
