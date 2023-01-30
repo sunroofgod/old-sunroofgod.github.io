@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../assets/style.css">
+        <script>MathJax = {tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}};</script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>LIAN Kah Seng</h1> 
+            <nav>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="https://github.com/sunroofgod">Projects</a></li>
+                        <li><a href="">Blog</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <hr></hr>
+        <desc>
+            <div class = "title">
+                <u><b><p>Activation Functions in a Neural Network</p></b></u>
+                <p>30 Jan 2023</p>
+            </div>
+            <p>
+                <i>Just a quick note on the types of Activation Functions.</i>
+            </p>
+            <p>
+                Firstly, a rehash on the purpose of Activation Functions. It is to add <mark>non-linearity</mark> 
+                into the neural network. 
+            </p>
+            <p>
+                Why the need for non-linearity? 
+                To put things simply, because if not, it would too linear. To discuss this, lets first think about what a
+                neural network is. We know that a neural network comprises of three layers. 
+                An <u>Input layer, (possible) Hidden Layers and an Output layer</u>. Within each layer, there
+                contains multiple nodes (neurons). At each individual node, the following takes place: 
+                $$\sum_{i=0}^{n}x_iw_i$$
+            </p>
+            <p>
+                $x_i$ denotes the inputs and $w_i$ denotes the magnitude of the weights (scalar). Additionally,
+                this assumes that there is a total of $n$ inputs, with $x_0$ and $w_0$ being the input and weight
+                of the bias respectively.
+            </p>
+            <p>
+                At the end of the summation, an output value is calculated. If this happens throughout the entire 
+                neural network, we know that this results in only <u>linear transformations</u> taking place. Therefore,
+                how are we to solve this issue of linearity? The addition of <mark>Activation Functions</mark> <u>after</u> the summation.
+            </p>
+            <p>
+                <b>Types of Activation Functions</b>
+            </p>
+            <p>
+                1. Sigmoid (Logistic) Function
+                <p>
+                   $$f(z)=\frac{1}{1+e^{-z}}$$
+                </p>
+                <p>
+                    The output will result in anything between 0 to 1. Therefore, this 
+                    Function is primarily used for outputs that require the prediction of probability. 
+                    It also results an increase in performance due to the fact that the values are either closer to 0 or 1.
+                </p>
+                <p>
+                    <u>Limitations</u>: 
+                    <ol>
+                        <li>
+                            Due to the nature of the non-zero values, it can result in gradient vanishing problem. Therefore,
+                            it is wise to not use Sigmoid Functions in the hidden layers. 
+                        </li>
+                        <li>
+                            It can result in higher time complexity due to the presence of the exponent.
+                        </li>
+                    </ol>
+                </p>
+            </p>
+            <p>
+                <i>More to be added.</i> 
+            </p>
+            <hr></hr>
+            <p>
+                Feel free to contact me at <u>kahseng@u.nus.edu</u>
+            </p>
+            <p>
+                Quick Links: <a href="https://www.linkedin.com/in/liankahseng/">Linkedin</a> | 
+                <a href="https://github.com/sunroofgod">Github</a> | 
+            </p>
+        </desc>
+    </body>
+</html>
