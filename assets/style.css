@@ -36,18 +36,6 @@ nav {
     text-decoration: none;
     font-size: 16px;
 }
-.nav-links ul li::after {
-    content: "";
-    width: 0%;
-    height: 2px;
-    background: rgb(255, 83, 103);
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-.nav-links ul li:hover::after {
-    width: 100%;
-}
 
 .maintext{
     font-weight: 600;
@@ -57,3 +45,24 @@ nav {
     display: flex;
     justify-content:space-between;
 }
+
+a {
+    /* Keeps the pseudo-element contained to the element */
+    position: relative;
+    color:rgb(0, 0, 0);
+}
+  
+  a::before {
+    background: #33a7ff9e;
+    content: "";
+    inset: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transition: transform .5s ease-in-out;
+    transform-origin: left;
+    z-index: -1;
+  }
+
+  a:hover::before {
+    transform: scaleX(1)
+  }
