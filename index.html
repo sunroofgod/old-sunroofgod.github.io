@@ -1,80 +1,71 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, intial-scale=1.0">
-        <title>Portfolio Website</title>
-        <link rel="stylesheet" href="css/styles.css">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/style.css">
+        <script>MathJax = {tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}};</script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </head>
     <body>
-        <section class="header">
+        <header>
+            <h1>LIAN Kah Seng</h1> 
             <nav>
                 <div class="nav-links">
                     <ul>
                         <li><a href="">Home</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Projects</a></li>
+                        <li><a href="https://github.com/sunroofgod">Projects</a></li>
                         <li><a href="">Blog</a></li>
                     </ul>
                 </div>
             </nav>
-        </section>
-        <div class="container">
-            <h1>I love <span class="maintext"></span></h1>
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-        <script>
-            var typed = new Typed(".maintext", {
-                strings: ["coding.^900", "math.^900", "theatre.^900", "sleeping.^1000", "being hired."],
-                typeSpeed: 150,
-                backSpeed: 50,
-                loop: true
-            })
-        </script>
-
-        <section class="about">
-            <div class="textbox">
-                <h2>HI THERE! I'M<br><span>KAH SENG</span></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna 
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit 
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-                    occaecat cupidatat non proident, sunt in culpa qui officia 
-                    deserunt mollit anim id est laborum.</p>
-            </div>
-            <div class="containers">
-                <form class="calculator" name="calc">
-                    <input type="text" readonly class="value" name="txt"/>
-                    <span class="num clear" onclick="calc.txt.value = ''">c</span>
-                    <span class="num" onclick="document.calc.txt.value += '/'">/</span>
-                    <span class="num" onclick="document.calc.txt.value += '*'">*</span>
-                    <span class="num" onclick="document.calc.txt.value += '7'">7</span>
-                    <span class="num" onclick="document.calc.txt.value += '8'">8</span>
-                    <span class="num" onclick="document.calc.txt.value += '9'">9</span>
-                    <span class="num" onclick="document.calc.txt.value += '-'">-</span>
-                    <span class="num" onclick="document.calc.txt.value += '4'">4</span>
-                    <span class="num" onclick="document.calc.txt.value += '5'">5</span>
-                    <span class="num" onclick="document.calc.txt.value += '6'">6</span>
-                    <span class="num plus" onclick="document.calc.txt.value += '+'">+</span>
-                    <span class="num" onclick="document.calc.txt.value += '1'">1</span>
-                    <span class="num" onclick="document.calc.txt.value += '2'">2</span>
-                    <span class="num" onclick="document.calc.txt.value += '3'">3</span>
-                    <span class="num" onclick="document.calc.txt.value += '0'">0</span>
-                    <span class="num" onclick="document.calc.txt.value += '00'">00</span>
-                    <span class="num" onclick="document.calc.txt.value += '.'">.</span>
-                    <span class="num" onclick="document.calc.txt.value = eval(calc.txt.value)">=</span>
-                </form>
-            </div>
-            <script type="text/javascript" src="assets/vanilla-tilt.js"></script>
-            <script type="text/javascript">
-                VanillaTilt.init(document.querySelector(".containers"), {
-                    max: 25,
-                    speed: 400,
-                    glare: true,
-                    "max-glare": 1
-                });
-            </script>
+        </header>
+        <hr></hr>
+        <desc>
+            <p>
+                <b>Hi!</b> I am an Undergraduate from National University of Singapore, pursuing a Major in <u>Data Science & Analytics</u>, 
+                with a second major in Theatre Studies and a minor in <u>Computer Science</u>.
+            </p>
+            <p>
+                My areas of <u>Interests</u> includes:
+                <ul>
+                    <li>Natural Language Processing</li>
+                    <li>Machine Learning</li>
+                    <li>Neural Networks</li>
+                </ul>
+            </p>
+            <p>
+                <p>Additionally, I have many other loves. Here are some of them: I love <span class="maintext"></span></p>
+                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+                <script>
+                    var typed = new Typed(".maintext", {
+                    strings: ["coding.^900", "math.^900", "theatre.^900", "being hired."],
+                    typeSpeed: 150,
+                    backSpeed: 50,
+                    loop: false
+                    })
+                </script>
+            </p>
+            <p>
+                Here are my most recent Blog posts:
+                <div class="blog">
+                <ol>
+                    <li><a href="/blog/mle_normaldist.html">Finding MLE of a Uniform Distribution</a></li>
+                </ol>
+                </div>
+            </p>
+            <hr></hr>
+            <p>
+                Feel free to contact me at <u>kahseng@u.nus.edu</u>
+            </p>
+            <p>
+                Quick Links: <a href="https://www.linkedin.com/in/liankahseng/">Linkedin</a> | 
+                <a href="https://github.com/sunroofgod">Github</a> | 
+            </p>
+        </desc>
     </body>
 </html>
-

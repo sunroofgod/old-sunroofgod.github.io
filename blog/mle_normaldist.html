@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../assets/style.css">
+        <script>MathJax = {tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}};</script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>LIAN Kah Seng</h1> 
+            <nav>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="https://github.com/sunroofgod">Projects</a></li>
+                        <li><a href="">Blog</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <hr></hr>
+        <desc>
+            <div class = "title">
+                <u><b><p>Finding MLE of a Uniform Distribution</p></b></u>
+                <p>30 Jan 2023</p>
+            </div>
+            <p>
+                <i>Just wanted to put down a quick note about the generation of an <u>unbiased</u> Maximum Likelihood Estimation (MLE) 
+                    for a Uniform Distribution.</i>
+            </p>
+            <p>
+                Let $X_1, ... , X_n$ be i.i.d. random samples from Uniform$[0,\theta]$.
+            </p>
+            <p>
+                The steps to solve it are as follows:
+                <ol>
+                    <li>Prove that our existing estimate is biased.</li>
+                    <ul>
+                        <li>Find the cdf of the distribution.</li>
+                        <li>Find the pdf of $max\{X_1,...,X_n\}$.</li>
+                        <li>Find the mean.</li>
+                    </ul>
+                    <li>Find the actual unbiased estimate.</li>
+                </ol>
+            </p>
+            <p>
+                Firstly, we know the mle $\hat{\theta}$ of $\theta$ is $\hat{\theta} = max\{X_1,...,X_n\}$. Therefore,
+                we will first try to see if this estimate is biased. 
+            </p>
+            <p>
+                1.
+            </p>
+            <p>
+                \begin{align*}
+                Y &= max\{X_1,...,X_n\} \\
+                \\
+                F_Y(y) &= P(X_1,...X_n < y) \\
+                    &= P(X_1 < y)...P(X_n < y) \\
+                    &= [P(X_1)]^n \\
+                    &= [F_X(y)]^n \\ 
+                \\ 
+                \therefore F_Y(y) &= [F_X(y)]^n \\
+                \\
+                f_Y(y) &= \frac{d}{dy}F_y(y)\\
+                    &= \frac{d}{dx}[F_X(y)]^n \\ 
+                    &= n[F_X(y)]^{n-1}f_X(y)\\
+                \\
+                \therefore f_Y(y) &= n \cdot (\frac{y}{\theta})^{n-1} \cdot \frac{1}{\theta}\\
+                    &= \frac{n}{\theta^n} \cdot y^{n-1}\\
+                \\
+                E[Y] &= \int_{0}^{\theta} yf_y(y) \,dy \\
+                    &= \frac{n}{\theta^n} \int_{0}^{\theta} y^n \,dy \\
+                    &= \frac{n}{\theta^n} [\frac{1}{n+1}y^{n+1}]_{0}^{\theta}\\
+                    &= \frac{n}{n+1} \theta \\ 
+                    &\neq \theta \\
+                \end{align*}
+            </p>
+            <p>
+                2.
+            </p>
+            <p>
+                Therefore, if we take $\frac{n+1}{n}Y$ to be an estimate, $\hat\theta$, s.t.
+                \begin{align*}
+                E[\hat\theta] &= E[\frac{n+1}{n}Y] \\
+                    &= \theta  
+                \end{align*}
+            </p>
+            <hr></hr>
+            <p>
+                Feel free to contact me at <u>kahseng@u.nus.edu</u>
+            </p>
+            <p>
+                Quick Links: <a href="https://www.linkedin.com/in/liankahseng/">Linkedin</a> | 
+                <a href="https://github.com/sunroofgod">Github</a> | 
+            </p>
+        </desc>
+    </body>
+</html>
