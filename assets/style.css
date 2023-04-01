@@ -5,11 +5,6 @@ p {
 b {
     font-weight: 600;
 }
-highlight:hover {
-    color:rgba(255, 178, 77, 0.821);
-    transition: 0.3s;
-    transition-delay: 0.1s;
-}
 body{
     margin: 0;
     padding: 0;
