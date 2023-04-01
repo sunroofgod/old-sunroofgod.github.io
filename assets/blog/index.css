@@ -5,10 +5,9 @@ p {
 b {
     font-weight: 600;
 }
-highlight:hover {
-    color:rgba(255, 178, 77, 0.821);
-    transition: 0.3s;
-    transition-delay: 0.1s;
+special {
+    font-weight: 500;
+    font-size: 25px;
 }
 body{
     margin: 0;
@@ -76,6 +75,7 @@ nav {
     justify-content: left;
 }
 .greetings p {
+    min-height: 9vh;
     font-size: 40px;
     font-weight: 500;
     line-height: 35px;
@@ -104,18 +104,16 @@ nav {
 .intro .left-block {
     width: 10%
 }
-.skills {
+.blog-posts {
     padding-bottom: 50px;
 }
-.skill {
+.post {
     border-top: 1px solid black;
     display: flex;
     justify-content: space-between; 
 }
-.maintext{
-    color: #111;
-    font-size: 1em;
-    font-weight: 500;
+.post p special a {
+    text-decoration: none;
 }
 footer{
     display: flex;

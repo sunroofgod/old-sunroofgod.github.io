@@ -3,12 +3,11 @@ p {
     font-size: 16px;
 }
 b {
+    font-size: 20px;
     font-weight: 600;
 }
-highlight:hover {
-    color:rgba(255, 178, 77, 0.821);
-    transition: 0.3s;
-    transition-delay: 0.1s;
+mark {
+    background-color: rgba(255, 178, 77, 0.821);;
 }
 body{
     margin: 0;
@@ -82,40 +81,9 @@ nav {
 }
 .greetings p smalltext {
     line-height: 0;
-    font-style: italic;
     font-weight: 400;
     color:rgba(84, 84, 84, 0.682);
     font-size: 16px;
-    padding-right: 10%;
-}
-.intro {
-    padding: 10px;
-    padding-bottom: 20px;
-    display: flex;
-    justify-content: space-around;
-    overflow: hidden;
-}
-.intro .text-block {
-    padding-left: 10px;
-    text-align: left;
-    min-width: 30%;
-    max-width: 50%;
-}
-.intro .left-block {
-    width: 10%
-}
-.skills {
-    padding-bottom: 50px;
-}
-.skill {
-    border-top: 1px solid black;
-    display: flex;
-    justify-content: space-between; 
-}
-.maintext{
-    color: #111;
-    font-size: 1em;
-    font-weight: 500;
 }
 footer{
     display: flex;
